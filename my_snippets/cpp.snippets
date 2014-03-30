@@ -1,0 +1,172 @@
+extends c
+
+snippet cr "const&" !w
+const&
+endsnippet
+
+snippet arr "std::array<T>" !w
+std::array<$1>
+endsnippet
+
+snippet vec "std::vector<T>" !w
+std::vector<$1>
+endsnippet
+
+snippet deq "std::deque<T>" !w
+std::deque<$1>
+endsnippet
+
+snippet flis "std::forward_list" !w
+std::forward_list<$1>
+endsnippet
+
+snippet lis "std::list" !w
+std::list<$1>
+endsnippet
+
+snippet map "std::map<T1, T2>" !w
+std::map<$1, $2>
+endsnippet
+
+snippet mmap "std::multimap<T1, T2>" !w
+std::multimap<$1, $2>
+endsnippet
+
+snippet ummap "std::unordered_multimap<T1, T2>" !w
+std::unordered_multimap<$1, $2>
+endsnippet
+
+snippet set "std::set<T1>" !w
+std::set<$1>
+endsnippet
+
+snippet mset "std::multiset<T1>" !w
+std::multiset<$1>
+endsnippet
+
+snippet uset "std::unordered_set<T1>" !w
+std::unordered_set<$1>
+endsnippet
+
+snippet umset "std::unordered_multiset<T1>" !w
+std::unordered_multiset<$1>
+endsnippet
+
+snippet sta "std::stack<T>" !w
+std::stack<$1>
+endsnippet
+
+snippet que "std::queue<T>" !w
+std::queue<$1>
+endsnippet
+
+snippet pque "std::priority_queue<T>" !w
+std::priority_queue<$1>
+endsnippet
+
+snippet str "std::string" !w
+std::string
+endsnippet
+
+snippet sp "std::shared_ptr" !w
+std::shared_ptr<$1>
+endsnippet
+
+snippet ns "Named namespace" !b
+namespace ${1:/* namespace-name */}
+{
+
+	${VISUAL}$2
+
+} // close $1 namespace
+endsnippet
+
+snippet uns "Unnamed namespace" !b
+namespace
+{
+
+	${VISUAL}$1
+
+} // close unnamed namespace
+endsnippet
+
+snippet cl "Class" !b
+class ${1:`!p snip.rv = snip.basename or "name"`}${2}
+{
+$3
+};
+endsnippet
+
+snippet pub "public:" !b
+public:
+	$0
+endsnippet
+
+snippet pro "protected:" !b
+protected:
+	$0
+endsnippet
+
+snippet pri "private:" !b
+private:
+	$0
+endsnippet
+
+snippet for "for (...) {}" !b
+for ($1)
+{
+	$2
+}
+endsnippet
+
+snippet if "if (...) {}" !b
+if ($1)
+{
+	$2
+}
+endsnippet
+
+snippet elif "else if (...) {}" !b
+else if ($1)
+{
+	$2
+}
+endsnippet
+
+snippet else "else {}" !b
+else
+{
+	$2
+}
+endsnippet
+
+snippet wh "while (...)" !b
+while ($1)
+{
+	$2
+}
+endsnippet
+
+snippet sw "switch (...)" !b
+switch ($1)
+{
+$2
+}
+endsnippet
+
+snippet ca "case ...:" !b
+case $1:
+	$2
+	break;
+endsnippet
+
+snippet co "std::cout << ... << std::endl" !b
+std::cout << $1 << ${0:std::endl;}
+endsnippet
+
+snippet te "TEST(..., ...) {}" !b
+TEST($1, $2)
+{
+	$3
+}
+endsnippet
