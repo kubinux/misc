@@ -84,9 +84,14 @@ let g:ycm_semantic_triggers = {
 "let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'cmake': 1 }
 let g:ycm_filetype_whitelist = { 'c': 1, 'cpp': 1, 'python': 1, 'cmake': 1 }
 
-nnoremap <leader>d :YcmCompleter GoTo<CR>
-nnoremap <leader>r :YcmCompleter QueryReferences<CR>
+au FileType c,cpp nnoremap <leader>dd :YcmCompleter GoTo<CR>
+au FileType c,cpp nnoremap <leader>d  :YcmCompleter GoToImprecise<CR>
+au FileType c,cpp nnoremap <leader>rr :YcmCompleter QueryReferences<CR>
+au FileType c,cpp nnoremap <leader>r  :YcmCompleter QueryReferencesImprecise<CR>
+au FileType c,cpp nnoremap <leader>ff :YcmCompleter GoToIncludedFile<CR>
+au FileType c,cpp nnoremap <leader>f  :YcmCompleter GoToIncludedFileImprecise<CR>
 
+au FileType python nnoremap <leader>d :YcmCompleter GoTo<CR>
 
 let g:pymode = 1
 let g:pymode_options = 1
