@@ -90,6 +90,8 @@ au FileType c,cpp nnoremap <leader>rr :YcmCompleter QueryReferences<CR>
 au FileType c,cpp nnoremap <leader>r  :YcmCompleter QueryReferencesImprecise<CR>
 au FileType c,cpp nnoremap <leader>ff :YcmCompleter GoToIncludedFile<CR>
 au FileType c,cpp nnoremap <leader>f  :YcmCompleter GoToIncludedFileImprecise<CR>
+au FileType c,cpp nnoremap <leader>ss :YcmCompleter QuerySubtypes<CR>
+au FileType c,cpp nnoremap <leader>s  :YcmCompleter QuerySubtypesImprecise<CR>
 
 au FileType python nnoremap <leader>d :YcmCompleter GoTo<CR>
 
